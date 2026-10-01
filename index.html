@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC PAGE SETTINGS
+         ===================================================== -->
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the website display properly on phones/tablets -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NU-Clark Library Portal | Home</title>
+
+    <!-- Connects index.html to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+         ===================================================== -->
+
+    <header>
+
+        <!-- Website identity -->
+        <div class="logo">
+
+            <h2>NU-Clark Library Portal</h2>
+
+            <p>Education that works.</p>
+
+        </div>
+
+
+        <!-- Main navigation -->
+        <nav>
+
+            <!--
+                "active" highlights Home because
+                this is currently the Home page.
+            -->
+            <a href="index.html"
+               class="active">
+                Home
+            </a>
+
+
+            <!--
+                This goes directly to the About section
+                located near the bottom of this page.
+            -->
+            <a href="#about">
+                About
+            </a>
+
+
+            <!--
+                JavaScript automatically changes this
+                from Login to Logout after successful login.
+            -->
+            <a href="login.html"
+               id="loginNav"
+               class="nav-login">
+                Login
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO / MAIN BANNER
+         ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+
+            <!-- Small university name -->
+            <p class="university-name">
+                NATIONAL UNIVERSITY – CLARK
+            </p>
+
+
+            <!-- Main website title -->
+            <h1>
+                NU-Clark Library Portal
+            </h1>
+
+
+            <!-- Website tagline -->
+            <h2>
+                Your Gateway to Knowledge
+            </h2>
+
+
+            <!-- Short description -->
+            <p class="description">
+
+                Explore the Learning Resource Center,
+                discover available books, and keep track
+                of your borrowed library materials.
+
+            </p>
+
+
+            <!--
+                NOTE:
+
+                The old orange "Login to Library" button
+                has been removed as requested.
+
+                Login is now located only in the
+                navigation bar above.
+            -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         THREE MAIN LIBRARY SECTIONS
+         ===================================================== -->
+
+    <!--
+        These three sections require the student
+        to log in first.
+
+        The "data-protected" attribute is detected
+        by script.js.
+
+        If the student is NOT logged in:
+        → A message appears
+        → Student is sent to login.html
+
+        If the student IS logged in:
+        → The requested page opens normally
+    -->
+
+    <section class="services">
+
+
+        <!-- =============================================
+             1. LEARNING RESOURCE CENTER SERVICES
+             ============================================= -->
+
+        <a href="services.html"
+           class="service-card"
+           data-protected>
+
+            <div class="icon">
+                🏫
+            </div>
+
+            <h3>
+                Library Services
+            </h3>
+
+            <p>
+
+                Learn about the Learning Resource Center,
+                its facilities, operating hours,
+                study spaces, and services.
+
+            </p>
+
+        </a>
+
+
+
+        <!-- =============================================
+             2. BROWSE BOOK COLLECTION
+             ============================================= -->
+
+        <a href="collection.html"
+           class="service-card"
+           data-protected>
+
+            <div class="icon">
+                📚
+            </div>
+
+            <h3>
+                Browse Collection
+            </h3>
+
+            <p>
+
+                Browse books in the library and check
+                their publication information and
+                current availability.
+
+            </p>
+
+        </a>
+
+
+
+        <!-- =============================================
+             3. STUDENT BORROWED BOOKS
+             ============================================= -->
+
+        <a href="borrowed.html"
+           class="service-card"
+           data-protected>
+
+            <div class="icon">
+                📖
+            </div>
+
+            <h3>
+                My Borrowed Books
+            </h3>
+
+            <p>
+
+                View the books currently borrowed
+                under your student account.
+
+            </p>
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT SECTION
+         ===================================================== -->
+
+    <!--
+        id="about" allows the About navigation
+        link above to jump directly to this section.
+    -->
+
+    <section class="about"
+             id="about">
+
+
+        <h2>
+            About the Library Portal
+        </h2>
+
+
+        <p>
+
+            The NU-Clark Library Portal is a student project
+            designed to demonstrate a simple online interface
+            for accessing information and services of the
+            Learning Resource Center.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+
+        <h3>
+            NU-Clark Library Portal
+        </h3>
+
+
+        <p>
+            Knowledge • Learning • Discovery
+        </p>
+
+
+        <!-- Makes clear that this is not an official NU system -->
+        <p class="project-note">
+            Student Project — For Educational Purposes Only
+        </p>
+
+
+        <p>
+            &copy; 2026 NU-Clark Library Portal
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <!--
+        script.js controls:
+
+        • Login status
+        • Logout
+        • Protected pages
+        • Protected Home buttons
+        • Student information
+
+        This should remain near the bottom of <body>
+        so the HTML loads before JavaScript runs.
+    -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

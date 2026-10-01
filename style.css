@@ -1,0 +1,1177 @@
+/* =========================================================
+   NU-CLARK LIBRARY PORTAL
+   MAIN STYLESHEET
+
+   This CSS file controls the appearance of:
+   - Home page
+   - Navigation bar
+   - Main library sections
+   - Login page
+   - Library services page
+   - Browse collection page
+   - Borrowed books page
+   - Footer
+   - Mobile responsiveness
+   ========================================================= */
+
+
+/* =========================================================
+   1. GENERAL / GLOBAL DESIGN
+   ========================================================= */
+
+/*
+   The * selector selects ALL elements.
+
+   box-sizing: border-box makes width and height calculations
+   easier because padding and borders are included in the
+   element's total size.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+   Basic appearance of the entire website.
+*/
+body {
+    background-color: #ffffff;
+    color: #333333;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    line-height: 1.6;
+}
+
+
+/*
+   Removes the default underline from links.
+*/
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   2. HEADER AND NAVIGATION BAR
+   ========================================================= */
+
+header {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 30px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #ffffff;
+}
+
+
+/* Website name located at the upper-left corner. */
+.logo h2 {
+    color: #123f7c;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+
+/* "Education that works." */
+.logo p {
+    margin-top: 5px;
+
+    color: #777777;
+    font-size: 17px;
+}
+
+
+/*
+   Navigation holds Home, About and Login/Logout.
+*/
+nav {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+
+/* Normal navigation links */
+nav a {
+    color: #123f7c;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 10px 5px;
+
+    transition: 0.2s;
+}
+
+
+/* Small visual effect when mouse is placed over a link. */
+nav a:hover {
+    color: #d99b20;
+}
+
+
+/*
+   The active class indicates the page/section
+   currently selected.
+*/
+nav a.active {
+    color: #123f7c;
+
+    border-bottom: 3px solid #f4b942;
+}
+
+
+/*
+   Login and Logout are styled as blue buttons.
+*/
+nav a.nav-login {
+    background-color: #123f7c;
+    color: #ffffff;
+
+    padding: 13px 28px;
+
+    border-radius: 8px;
+}
+
+
+/* Login button changes slightly when hovered. */
+nav a.nav-login:hover {
+    background-color: #0b2f61;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   3. HOME PAGE HERO SECTION
+   ========================================================= */
+
+/*
+   The hero is the large blue area containing
+   the NU-Clark Library Portal introduction.
+*/
+.hero {
+    max-width: 1400px;
+    min-height: 540px;
+
+    margin: 10px auto 0;
+
+    padding: 90px 7%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #123f7c;
+
+    /* Yellow line at the top of the hero. */
+    border-top: 7px solid #f4b942;
+}
+
+
+/* Keeps the hero text from becoming too wide. */
+.hero-content {
+    max-width: 1000px;
+}
+
+
+/* NATIONAL UNIVERSITY – CLARK */
+.university-name {
+    color: #ffffff;
+
+    font-size: 18px;
+    letter-spacing: 7px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Main NU-Clark Library Portal heading */
+.hero h1 {
+    color: #ffffff;
+
+    font-size: 68px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+/* "Your Gateway to Knowledge" */
+.hero h2 {
+    color: #f4b942;
+
+    font-size: 35px;
+    font-weight: normal;
+
+    margin-bottom: 35px;
+}
+
+
+/* Main description underneath the heading */
+.hero .description {
+    max-width: 900px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   4. THREE MAIN LIBRARY SECTIONS
+   ========================================================= */
+
+/*
+   Contains:
+   1. Library Services
+   2. Browse Collection
+   3. My Borrowed Books
+*/
+.services {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    background-color: #f4f6f8;
+}
+
+
+/*
+   Each service-card is also an <a> link,
+   which makes the entire card clickable.
+*/
+.service-card {
+    width: 33.333%;
+
+    min-height: 330px;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    color: inherit;
+
+    border-right: 1px solid #d8d8d8;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* Removes the divider after the last card. */
+.service-card:last-child {
+    border-right: none;
+}
+
+
+/*
+   When the mouse is placed over a card,
+   the card moves upward slightly.
+*/
+.service-card:hover {
+    transform: translateY(-5px);
+
+    background-color: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Emoji/icon at the top of each card. */
+.service-card .icon {
+    font-size: 45px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Service title */
+.service-card h3 {
+    color: #123f7c;
+
+    font-size: 27px;
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+}
+
+
+/* Service description */
+.service-card p {
+    color: #666666;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   5. ABOUT SECTION
+   ========================================================= */
+
+.about {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 7%;
+
+    text-align: center;
+}
+
+
+/* About the Library Portal */
+.about h2 {
+    color: #123f7c;
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+}
+
+
+/* About paragraph */
+.about p {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: #666666;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   6. FOOTER
+   ========================================================= */
+
+footer {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 55px 7%;
+
+    text-align: center;
+
+    background-color: #0d3263;
+    color: #ffffff;
+}
+
+
+/* Footer website name */
+footer h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Normal footer text */
+footer p {
+    font-size: 17px;
+
+    margin: 8px 0;
+}
+
+
+/* Educational project disclaimer */
+footer .project-note {
+    color: #f4b942;
+
+    font-size: 18px;
+
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   7. LOGIN PAGE
+   ========================================================= */
+
+/*
+   This class is placed on the <body> of login.html.
+*/
+.login-page {
+    min-height: 100vh;
+
+    background-color: #f3f5f8;
+}
+
+
+/*
+   Holds the left introduction and right login form.
+*/
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================================================
+   LEFT SIDE OF LOGIN PAGE
+   ========================================================= */
+
+.login-brand {
+    width: 50%;
+
+    padding: 80px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #123f7c;
+    color: #ffffff;
+
+    border-top: 7px solid #f4b942;
+}
+
+
+/* National University - Clark text */
+.login-brand .university-name {
+    margin-bottom: 20px;
+}
+
+
+/* Login page website heading */
+.login-brand h1 {
+    font-size: 52px;
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+
+/* Gateway to Knowledge */
+.login-brand h2 {
+    color: #f4b942;
+
+    font-size: 28px;
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+
+/* Description on left side */
+.login-brand > p:not(.university-name) {
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* Back to Home link */
+.back-home {
+    width: fit-content;
+
+    margin-top: 35px;
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    border-bottom: 2px solid #f4b942;
+}
+
+
+/* =========================================================
+   RIGHT SIDE OF LOGIN PAGE
+   ========================================================= */
+
+.login-box {
+    width: 50%;
+
+    padding: 70px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #ffffff;
+}
+
+
+/* Student Login */
+.login-box h2 {
+    color: #123f7c;
+
+    font-size: 38px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Small description underneath Student Login */
+.login-subtitle {
+    color: #777777;
+
+    margin-bottom: 30px;
+}
+
+
+/* Makes labels appear above their inputs. */
+.login-box label {
+    display: block;
+
+    color: #333333;
+
+    font-weight: bold;
+
+    margin: 15px 0 7px;
+}
+
+
+/* Text fields */
+.login-box input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    font-size: 16px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    outline: none;
+}
+
+
+/*
+   :focus is applied while the user is typing
+   inside the input field.
+*/
+.login-box input:focus {
+    border-color: #123f7c;
+
+    box-shadow: 0 0 0 2px rgba(18, 63, 124, 0.10);
+}
+
+
+/* Login button */
+.login-box button {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 15px;
+
+    background-color: #123f7c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Login button hover */
+.login-box button:hover {
+    background-color: #0b2f61;
+}
+
+
+/* Student project note underneath form */
+.login-note {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #888888;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   8. INNER PAGE GENERAL DESIGN
+   ========================================================= */
+
+/*
+   Used by:
+   - services.html
+   - collection.html
+   - borrowed.html
+*/
+.page-content {
+    max-width: 1200px;
+
+    min-height: 70vh;
+
+    margin: 0 auto;
+
+    padding: 70px 7%;
+}
+
+
+/* Small gold heading above page titles */
+.page-label {
+    color: #d99b20;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Main title on inner pages */
+.page-content > h1 {
+    color: #123f7c;
+
+    font-size: 45px;
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+
+/* Introduction paragraph */
+.page-intro {
+    max-width: 850px;
+
+    color: #666666;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================================
+   9. BROWSE COLLECTION / BOOK CARDS
+   ========================================================= */
+
+/*
+   book-grid contains all of the books.
+*/
+.book-grid {
+    display: grid;
+
+    gap: 25px;
+}
+
+
+/*
+   Individual book information card.
+*/
+.book-card {
+    padding: 30px;
+
+    display: flex;
+    gap: 25px;
+
+    background-color: #f5f7fa;
+
+    border-left: 5px solid #123f7c;
+    border-radius: 8px;
+}
+
+
+/* Book emoji */
+.book-icon {
+    font-size: 50px;
+}
+
+
+/* Book title */
+.book-card h2 {
+    color: #123f7c;
+
+    font-size: 27px;
+
+    margin: 10px 0 15px;
+}
+
+
+/* Book information */
+.book-card p {
+    color: #555555;
+
+    margin: 8px 0;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   10. BOOK AVAILABILITY LABELS
+   ========================================================= */
+
+/* Green label for available books */
+.available {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    background-color: #e5f6e9;
+    color: #217a35;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Red label for unavailable books */
+.unavailable {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    background-color: #fde8e8;
+    color: #a52a2a;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Gold label used on My Borrowed Books */
+.borrowed-status {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    background-color: #fff0c9;
+    color: #8a6200;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   11. LIBRARY SERVICES PAGE
+   ========================================================= */
+
+/*
+   Creates spacing between Campus History,
+   Facilities and Operating Hours.
+*/
+.information-section {
+    margin-top: 50px;
+}
+
+
+/* Section headings */
+.information-section h2 {
+    color: #123f7c;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* General information paragraphs */
+.information-section > p {
+    color: #555555;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   12. FACILITY CARDS
+   ========================================================= */
+
+/*
+   Creates three columns on larger screens.
+*/
+.facility-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/*
+   Each library facility receives its own card.
+*/
+.facility-card {
+    min-height: 190px;
+
+    padding: 25px;
+
+    background-color: #f5f7fa;
+
+    border-radius: 8px;
+
+    border-top: 4px solid #f4b942;
+}
+
+
+/* Facility icon */
+.facility-card span {
+    font-size: 32px;
+}
+
+
+/* Facility title */
+.facility-card h3 {
+    color: #123f7c;
+
+    font-size: 21px;
+
+    margin: 12px 0 8px;
+}
+
+
+/* Facility description */
+.facility-card p {
+    color: #666666;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   13. OPERATING HOURS
+   ========================================================= */
+
+.hours {
+    max-width: 650px;
+
+    padding: 25px 30px;
+
+    background-color: #123f7c;
+    color: #ffffff;
+
+    border-left: 6px solid #f4b942;
+
+    border-radius: 8px;
+}
+
+
+/* Each operating hour row */
+.hours p {
+    margin: 10px 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   14. RESPONSIVE DESIGN FOR TABLETS
+   ========================================================= */
+
+/*
+   @media means:
+   Apply these CSS rules only when the screen
+   becomes 900 pixels wide or smaller.
+*/
+@media (max-width: 900px) {
+
+    /* Make navigation spacing smaller */
+    nav {
+        gap: 20px;
+    }
+
+
+    /* Slightly reduce the hero heading */
+    .hero h1 {
+        font-size: 52px;
+    }
+
+
+    /* Facilities change from 3 columns to 2 */
+    .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   15. RESPONSIVE DESIGN FOR MOBILE PHONES
+   ========================================================= */
+
+/*
+   These styles activate when the screen
+   is 768px wide or smaller.
+*/
+@media (max-width: 768px) {
+
+    /* -----------------------------------------
+       MOBILE HEADER
+       ----------------------------------------- */
+
+    header {
+        padding: 22px 6%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .logo h2 {
+        font-size: 27px;
+    }
+
+
+    /*
+       Keep navigation links on one row
+       when possible.
+    */
+    nav {
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+
+    nav a {
+        font-size: 16px;
+    }
+
+
+    nav a.nav-login {
+        padding: 9px 18px;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE HERO
+       ----------------------------------------- */
+
+    .hero {
+        min-height: auto;
+
+        margin: 0;
+
+        padding: 60px 7%;
+    }
+
+
+    .university-name {
+        font-size: 13px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+
+    .hero .description {
+        font-size: 17px;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE MAIN SERVICES
+       ----------------------------------------- */
+
+    /*
+       Instead of appearing beside each other,
+       cards are stacked vertically.
+    */
+    .services {
+        flex-direction: column;
+    }
+
+
+    .service-card {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 40px 25px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #dddddd;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE ABOUT
+       ----------------------------------------- */
+
+    .about {
+        padding: 60px 7%;
+    }
+
+
+    .about h2 {
+        font-size: 34px;
+    }
+
+
+    .about p {
+        font-size: 17px;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE LOGIN PAGE
+       ----------------------------------------- */
+
+    /*
+       Login page changes from side-by-side
+       to one section above the other.
+    */
+    .login-container {
+        flex-direction: column;
+    }
+
+
+    .login-brand,
+    .login-box {
+        width: 100%;
+    }
+
+
+    .login-brand {
+        min-height: auto;
+
+        padding: 55px 7%;
+    }
+
+
+    .login-brand h1 {
+        font-size: 40px;
+    }
+
+
+    .login-brand h2 {
+        font-size: 24px;
+    }
+
+
+    .login-box {
+        padding: 50px 7%;
+    }
+
+
+    .login-box h2 {
+        font-size: 32px;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE INNER PAGES
+       ----------------------------------------- */
+
+    .page-content {
+        padding: 50px 7%;
+    }
+
+
+    .page-content > h1 {
+        font-size: 36px;
+    }
+
+
+    /*
+       Book icon appears above the information
+       instead of beside it.
+    */
+    .book-card {
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+
+    /*
+       Facility cards change to one column.
+    */
+    .facility-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE FOOTER
+       ----------------------------------------- */
+
+    footer {
+        padding: 45px 7%;
+    }
+
+}
+
+
+/* =========================================================
+   16. EXTRA SMALL PHONE SCREENS
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    nav a.nav-login {
+        padding: 8px 14px;
+    }
+
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+
+    .page-content > h1 {
+        font-size: 32px;
+    }
+
+}

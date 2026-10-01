@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+
+   <meta name="viewport"
+         content="width=device-width, initial-scale=1.0">
+
+   <title>NU-Clark Library Portal | Login</title>
+
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+   <div class="login-container">
+
+       <!-- LEFT SIDE OF LOGIN PAGE -->
+       <div class="login-brand">
+
+           <p class="university-name">
+               NATIONAL UNIVERSITY – CLARK
+           </p>
+
+           <h1>NU-Clark Library Portal</h1>
+
+           <h2>Your Gateway to Knowledge</h2>
+
+           <p>
+               Sign in to access the Learning Resource Center,
+               browse the library collection, and view your
+               borrowed books.
+           </p>
+
+           <a href="index.html" class="back-home">
+               ← Back to Home
+           </a>
+
+       </div>
+
+
+       <!-- RIGHT SIDE / LOGIN FORM -->
+       <div class="login-box">
+
+           <h2>Student Login</h2>
+
+           <p class="login-subtitle">
+               Enter your student information to continue.
+           </p>
+
+           <!--
+               id="loginForm" allows JavaScript to identify
+               and control this form.
+           -->
+           <form id="loginForm">
+
+               <label for="lastname">
+                   Last Name
+               </label>
+
+               <input
+                   type="text"
+                   id="lastname"
+                   placeholder="Enter your last name"
+                   required
+               >
+
+
+               <label for="firstname">
+                   First Name
+               </label>
+
+               <input
+                   type="text"
+                   id="firstname"
+                   placeholder="Enter your first name"
+                   required
+               >
+
+
+               <label for="studentNumber">
+                   Student Number
+               </label>
+
+               <input
+                   type="text"
+                   id="studentNumber"
+                   placeholder="Enter your student number"
+                   required
+               >
+
+
+               <label for="email">
+                   Student Email
+               </label>
+
+               <!-- type="email" checks basic email format -->
+               <input
+                   type="email"
+                   id="email"
+                   placeholder="Enter your student email"
+                   required
+               >
+
+
+               <label for="password">
+                   Password
+               </label>
+
+               <!-- type="password" hides the typed characters -->
+               <input
+                   type="password"
+                   id="password"
+                   placeholder="Enter your password"
+                   required
+               >
+
+
+               <button type="submit">
+                   Log In
+               </button>
+
+           </form>
+
+           <p class="login-note">
+               Student Project — For Educational Purposes Only
+           </p>
+
+       </div>
+
+   </div>
+
+
+   <script src="script.js"></script>
+
+</body>
+
+</html>
